@@ -122,10 +122,3 @@ class PortfolioOptimizer:
 		print("  Annual Return: \t{}%".format(round(self.annual_performance(self.mean_daily_returns, weights_list[best_std_index], self.cov_matrix)[0] * 100)))
 		print("  Volatility: \t\t{}".format(self.annual_performance(self.mean_daily_returns, weights_list[best_std_index], self.cov_matrix)[1]))
 		print("-" * 60)
-		
-if __name__ == "__main__":
-	p = PortfolioOptimizer("1sof-3kR9pZ25SpEjN55", ["AAPL", "FB"])
-	p.optimize_sharpe_ratio(0.017)
-	p.optimize_returns(0.017)
-	p.optimize_risk(0.017)
-
